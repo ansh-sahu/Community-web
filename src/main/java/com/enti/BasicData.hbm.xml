@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 6, 2021 4:01:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.entities.BasicData" table="basic_data" catalog="hibernatedemo" optimistic-lock="version">
+        <id name="email" type="string">
+            <column name="email" length="150" />
+            <generator class="assigned" />
+        </id>
+        <property name="first" type="string">
+            <column name="first" length="150" not-null="true" />
+        </property>
+        <property name="last" type="string">
+            <column name="last" length="150" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="150" not-null="true" unique="true" />
+        </property>
+        <property name="gender" type="boolean">
+            <column name="gender" not-null="true" />
+        </property>
+        <property name="age" type="int">
+            <column name="age" not-null="true" />
+        </property>
+        <property name="field" type="string">
+            <column name="field" length="150" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
